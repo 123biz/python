@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<title>온라인 파이썬 강좌</title>
+
+<style>
+    .header {
+        position: sticky; /* 고정 위치 */
+        top: 0; /* 화면 상단에 붙이기 */
+        margin: 0 auto; 
+        background-color: #333; /* 헤더 배경색 */
+    }
+
+    .header img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .footer {
+        padding: 20px;
+        text-align: center;
+        background-color: #333;
+        color: #fff;
+    }
+
+    .container {
+        max-width: 768px; /* 페이지 최대 폭을 768px로 제한 */
+        margin: 0 auto; /* 수평 가운데 정렬 */
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f8ff;
+        color: #333;
+        margin: 0;
+    }
+
+    .section {
+        padding: 20px 20px;
+        text-align: center;
+        background-color: #ffffff;
+        height: auto; /* 섹션 높이 자동 조정 */
+        overflow: visible;
+
+    }
+
+    .section2 {
+            padding: 0px 0px;
+        }
+
+    .form-container {
+        max-width: 600px;
+        margin: 0 auto;
+        margin-bottom: 30px;
+        padding: 20px;
+        background-color: #f0f8ff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-box {
+        margin-bottom: 15px;
+        margin-left: 15px;
+        margin-right: 20px;
+        text-align: left;
+    }
+
+    .form-box label {
+        font-weight: bold;
+    }
+
+    .form-box input[type="text"],
+    .form-box input[type="tel"],
+    .form-box input[type="email"] {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .submit-container {https://github.com/123biz/landing/actions/caches
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .submit-button {
+        padding: 15px 30px;
+        font-size: 16px;
+        color: #fff;
+        background-color: red;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .submit-button:hover {
+        background-color: darkred;
+        transform: scale(1.05);
+    }
+
+    .image-gallery {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 0px;
+    }
+    
+    .image-gallery img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    @media (max-width: 768px) {
+        button {
+            width: 50%;  /* 모바일에서는 버튼을 화면의 90% 너비로 설정 */
+            padding: 10px;  /* 적절한 패딩 추가 */
+        }
+    }
+
+    .radio-group {
+        justify-content: left; /* 왼쪽 정렬 */
+        align-items: center; /* 수직 가운데 정렬 */
+        padding: 10px; /* 전체 그룹의 패딩 */
+        border: 1px solid #ccc; /* 박스 테두리 */
+        border-radius: 5px; /* 모서리 둥글게 */
+        background-color: white; /* 박스 배경색 */
+    }
+    .radio-group label {
+        display: flex;
+        align-items: center; /* 텍스트와 라디오 버튼 수직 정렬 */
+        font-size: 14px; /* 텍스트 크기 */
+    }
+    .radio-group input[type="radio"] {
+        margin-right: 10px; /* 버튼과 텍스트 간격 */
+    }
+
+    .spinner {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        margin-right: 8px;
+        border: 2px solid #fff;
+        border-top-color: #007bff; /* 스피너 색상 */
+        border-radius: 50%;
+        animation: spin 0.6s linear infinite;
+    }
+
+    @keyframes spin {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+</style>
+</head>
+
+<body>
+<div class="container">
+
+    <div class="header">
+        <img src="slide00.png" alt= >
+    </div>
+
+    <div class="section">
+        <div class="image-gallery">
+            <img src="slide01.png" alt= >
+            <img src="slide02.png" alt= >
+            <img src="slide03.png" alt= >
+            <img src="slide04.png" alt= >
+            <img src="slide05.png" alt= >
+            <img src="slide06.png" alt= >
+            <img src="slide07.png" alt= >
+            <img src="slide08.png" alt= >
+            <img src="slide09.png" alt= >
+            <img src="slide10.png" alt= >
+            <img src="slide11.png" alt= >
+            <img src="slide12.png" alt= >
+        </div>
+    </div>
+
+    <div class="section2">
+        <h4><strong>홍용기 컨설팅학 박사 소개(아래 탭 클릭)</strong></h4>
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse1"><h4><strong>HOME</strong></h4></a>
+                </h4>
+                </div>
+                <div id="collapse1" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <div class="image-gallery">
+                        <img src="picture1.jpg" alt="사진 1">
+                        <img src="picture2.png" alt="사진 2">
+                        <img src="picture3.jpg" alt="사진 3">
+                    </div>
+                </div>
+                </div>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse2"><h4><strong>현재 하고 있는 일</strong></h4></a>
+                </h4>
+                </div>
+                <div id="collapse2" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <ul>
+                        <li><h4>AI융합 비즈니스포럼 부회장</h4></li>
+                        <li><h4>지구파트너스 액셀러레이터 감사</h4></li>
+                        <li><h4>경영지도사 및 국제공인컨설턴트 CMC</h4></li>
+                        <li><h4>데이터분석 전문가 / 빅데이터분석기사</h4></li>
+                        <li><h4>기업*기술가치평가사</h4></li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse3"><h4><strong>컨설팅 및 강의 등 업무 실적</strong></h4></a>
+                </h4>
+                </div>
+                <div id="collapse3" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <ul>
+                        <li><h4>자율운송서비스 BM도출 중장기전략수립(한국통합물류협회)</h4></li>
+                        <li><h4>GMEP프로그램 멘토(창업진흥원 해외시장진출 프로그램:중국)</h4></li>
+                        <li><h4>ODA 프로젝트(요르단 치안정보통합관리시스템 구축 ISMP)</h4></li>
+                        <li><h4>벤처기업 육성플랫폼 구축전략 수립(벤처기업협회)</h4></li>
+                        <li><h4>데이터가치평가 컨설팅(중소벤처기업진흥공단)</h4></li>
+                        <li><h4>ISP컨설팅(창업진흥원,한국연구재단,소상공인시장진흥공단,서울시,경찰대학)</h4></li>
+                        <li><h4>전기차 관련 사업모델 구축 연구(광양만권경제자유구역청 GFEZ)</h4></li>
+                        <li><h4>데이터바우처 지원사업 사업수행 PM(한국데이터산업진흥원 K-Data)</h4></li>
+                        <li><h4>자동차부품 공급 및 수요현황 조사연구(경기도)</h4></li>
+                        <li><h4>축산ICT 융복합사업/빅데이터 컨설팅(농림수산식품교육문화정보원)</h4></li>
+                        <li><h4>안산시 창업생태계 조성사업 및 연구용역(안산시 & 행정안전부)</h4></li>
+                        <li><h4>글로벌 액셀러레이터 MAP 제작 연구용역(창업진흥원)</h4></li>
+                        <li><h4>해상풍력발전 사업타당성 및 경제성분석(H그룹 & 한국선급)</h4></li>
+                        <li><h4>초정밀 접목로봇 보급사업 경제성분석(농업기술실용화재단)</h4></li>
+                        <li><h4>데이터분석 및 실전 R코딩(경영기술지도사회)</h4></li>
+                        <li><h4>데이터분석 Python 심화과정(서울여성능력개발원 강동/용산센터)</h4></li>
+                        <li><h4>파이썬 활용 크롤링자동화 인텐시브과정(경영지도사 및 컨설턴트)</h4></li>
+                        <li><h4>AI활용 데이터분석 컨설팅방법론(국제공인컨설턴트 CMC 양성과정)</h4></li>
+                        <li><h4>AI & 데이터분석(AI융합비즈니스포럼,매경아카데미,동북아ICT포럼)</h4></li>
+                        <li><h4>창업과 경영 출강(여주대학교)</h4></li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse4"><h4><strong>논문 및 저서</strong></h4></a>
+                </h4>
+                </div>
+                <div id="collapse4" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <ul>
+                        <li><h4>도서 「생성형 AI 시대의 창의와 혁신」, 교보문고 퍼플, 공저, POD</h4></li>
+                        <li><h4>도서 「일반인을 위한 인공지능과 데이터 리터러시」, 교보문고 퍼플, POD</h4></li>
+                        <li><h4>도서 「All-In-One 생성형 AI 활용 전략」, 엠오브에스, 공저, 전자책</h4></li>
+                        <li><h4>도서 「챗GPT로 데이터분석 마스터하기」, 디즈비즈북스, 공저, 전자책</h4></li>
+                        <li><h4>도서 「성장하는 기업의 5가지 조건」, 한국경제신문i, 공저</h4></li>
+                        <li><h4>국내 자동차 애프터마켓 활성화 요인에 관한 연구: 델파이와 AHP를 활용하여. 박사논문</h4></li>
+                        <li><h4>컨설팅대학원의 교육서비스품질이 컨설팅 직무역량과 만족도에 미치는 영향. 석사논문</h4></li>
+                        <li><h4>컨설턴트역량이 프로젝트성과와 사회관계역량에 미치는 영향: ICMCI 역량 프레임워크를 중심으로. 융합정보논문지(Journal of Convergence for Information Technology). Vol. 11. No. 10, pp. 302-313, 2021. KCI</h4></li>
+                        <li><h4>The Mediating Effect of Mentor Competency between Founder Competency and Business Performance. International Journal of Advanced Science and Technology. Vol. 29, No. 4s, 174-181. SCOPUS</h4></li>
+                        <li><h4>The Effect of the Service Quality of Consulting Education on Consulting Job Competency and Satisfaction. International Journal of Innovation, Creativity and Change. Volume 9, Issue 3, 292-304. SCOPUS</h4></li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="image-gallery">
+            <img src="slide13.png" alt= >
+            <img src="slide14.png" alt= >
+            <img src="slide15.png" alt= >
+            <img src="slide16.png" alt= >
+            <img src="slide17.png" alt= >
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>수강 신청합니다!</h2>
+        <div class="form-container">
+            <form name="frm" onsubmit="return submitFormToGoogleSheets(this);">
+                <div class="form-box">
+                    <label for="v_name">신청자 이름<span class="required">*</span></label>
+                    <input type="text" name="v_name" placeholder="홍길동" required>
+                </div>
+                <div class="form-box">
+                    <label for="v_hp">휴대폰 번호<span class="required">*</span></label>
+                    <input type="tel" name="v_hp" placeholder="010-1234-5678" required>
+                </div>
+                <div class="form-box">
+                    <label for="v_email">이메일 주소<span class="required">*</span></label>
+                    <input type="email" name="v_email" placeholder="address@example.com" required>
+                </div>
+                <div class="form-box">
+                    <label>신청강좌 확인<span class="required">*</span></label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="v_subject" value="2월 온라인 파이썬 수요강좌" required>2월 온라인 파이썬 수요강좌</label>
+                    </div>
+                </div>
+
+                <div class="agree-form">
+                    <label>
+                        <input type="checkbox" name="agree" value="Y" required>
+                        개인정보 수집에 동의합니다.
+                    </label>
+                </div>
+                <div class="submit-container">
+                    <button id="submit-button" class="submit-button">SEND</button>
+                </div>
+            </form>
+            <div id="loading-spinner"></div>
+            
+        </div>
+    </div>
+    
+    <div class="footer">
+        <p>© 2024 KOEX Consulting Networks. All rights reserved.</p>
+        <p>대표컨설턴트: 홍용기   |   전화번호: 010-3366-9010</p>
+    </div>
+
+    <script>
+
+    function submitcheck(frm) {
+        if (!frm.agree.checked) {
+            alert("개인정보 수집에 동의해주세요.");
+            frm.agree.focus();
+            return false;
+        }
+        return true;
+    }
+
+    function submitFormToGoogleSheets(frm) {
+        if (!submitcheck(frm)) {
+            return false;
+        }
+    
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwfzQ94I28TTkGH3TFrnHioOXTM-hHvdtroyc9EHyp506PY9YIDDRY_LrQbRLyDIRHe/exec';
+
+        const formData = new FormData(frm);
+        const seoulTime = new Date().toLocaleString('ko-KR', { timeZone: 'Asia/Seoul', year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true });
+        formData.append('timestamp', seoulTime);
+
+        const submitButton = document.getElementById('submit-button');
+
+        // 버튼 상태 변경: 로딩 중
+        submitButton.innerHTML = '<span class="spinner"></span> Loading..';
+        submitButton.disabled = true;
+
+        fetch(scriptURL, {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => {
+            if (response.ok) {
+                alert('강의 신청이 완료되었습니다.');
+                frm.reset();
+            } else {
+                throw new Error('서버에서 오류 응답이 발생했습니다.');
+            }
+        })
+        .catch(error => {
+            alert('오류가 발생했습니다. 다시 시도해주세요.');
+            console.error('Error!', error.message);
+        })
+        .finally(() => {
+            // 버튼 상태 복원
+            submitButton.innerHTML = 'SEND';
+            submitButton.disabled = false;
+        });
+        return false;
+    }
+    </script>
+
+</div>
+</body>
+</html>
